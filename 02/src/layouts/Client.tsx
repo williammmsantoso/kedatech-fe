@@ -1,5 +1,6 @@
 'use client';
 
+import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
 import { Meta } from '@/components/Meta';
 import React, { useEffect } from 'react';
@@ -16,6 +17,7 @@ const Client = ({ message, children, metaTitle, metaDescription} : ClientInterfa
         <Meta metaTitle={metaTitle} metaDescription={metaDescription} />
         <Header/>
         <div className="body">{children}</div>
+        <Footer/>
     </div>
 }
 

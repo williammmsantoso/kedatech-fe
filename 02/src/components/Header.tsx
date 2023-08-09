@@ -1,5 +1,6 @@
 'use client';
 
+import { content } from "@/constant/content";
 import React, { useState } from "react";
 
 export const Header = () => {
@@ -35,15 +36,13 @@ export const Header = () => {
         <div
             className={`navigation-menu ${isNavExpanded ? 'expanded' : ' '}`}>
             <ul>
-                <li>
-                    <a className="routing" href="/home">About</a>
-                </li>
-                <li>
-                    <a className="routing" href="/about">Pricing</a>
-                </li>
-                <li>
-                    <a className="routing" href="/contact">Contact</a>
-                </li>
+                {
+                    content.map((item: any) => {
+                        return item.id >= 0 && <li key={item.name}>
+                            <a className="routing" href={item.url}>{item.name}</a>
+                        </li>
+                    })
+                }
                 <li>
                     <button className="button-login">Login</button>
                 </li>

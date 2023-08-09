@@ -4,12 +4,13 @@
     width: 100%;
     display: flex;
     align-items: center;
-    position: fixed;
+    position: absolute;
     top: 0;
     padding: 6px 48px;
     background-color: transparent;
     color: black;
     font-weight: 900;
+    z-index: 1;
     
     .home-text-wrapper {
         position: relative;
@@ -17,7 +18,7 @@
         .home-name {
             position: relative;
             text-decoration: none;
-            color: black;
+            color: white;
             font-size: 1.3rem;
             margin-left: 1rem;
         }

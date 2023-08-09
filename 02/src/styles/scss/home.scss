@@ -1,9 +1,38 @@
 .home-container {
     .banner-home {
         background: url('/bg-main.png');
-        height: 100vh;
+        padding: 16px;
+        padding-top: 120px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        position: relative;
+
+        .text-one {
+            margin-bottom: 120px;
+        }
+
+        .quotes {
+            margin: 60px 0;
+        }
+
+        .img {
+            object-fit: contain;
+            height: 210px;
+            margin-left: 60px;
+            margin-bottom: 48px;
+        }
+
+    }
+
+    .about-home {
+        background: rgb(82,113,255);
+        background: linear-gradient(90deg, rgb(82, 113, 255) 84%, rgb(140, 82, 255) 93%, rgb(179, 107, 224) 100%);
+        padding: 80px;
+
+        .img {
+            object-fit: contain;
+            height: 500px;
+        }
     }
 }
