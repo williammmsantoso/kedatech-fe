@@ -56,6 +56,11 @@ Kedua, Jalankan program
 npm run dev
 ```
 
+Login menggunakan,
+```email: 'william@kedatech.com'
+password: '12345678'
+```
+
 ## Teknologi yang digunakan
     1. NextJS:
     - Server-side Rendering (SSR)
