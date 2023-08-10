@@ -41,23 +41,36 @@
     .pricing-container {
         padding: 80px;
 
+        .subtitle {
+            margin-bottom: 115px;
+        }
+
         .pricing-list {
             margin: 48px 0;
 
             .price-item {
-                border: 1px solid #efefef;
+                border: 1px solid $border-color;
                 padding: 24px;
                 margin-right: 16px;
                 width: 100%;
-                min-height: 500px;
+                min-height: 550px;
 
                 display: flex;
                 flex-direction: column;
                 justify-content: inherit;
 
-                .price {
-                    font-size: 48px;
-                    font-weight: 800;
+                .title-wrapper {
+                    border-bottom: 1px solid $border-color;
+                    padding-bottom: 24px;
+
+                    .price {
+                        font-size: 48px;
+                        font-weight: 800;
+                    }
+
+                    .billed-text {
+                        font-size: 18px;
+                    }
                 }
 
                 .name {
@@ -79,6 +92,33 @@
                             width: 1em;
                             margin-left: -1em;
                         }
+                    }
+                }
+
+                &.popular {
+                    position: relative;
+                    border-color: $blue-secondary;
+
+                    &::after {
+                        content: "Popular";
+                        border-top-left-radius: 12px;
+                        border-top-right-radius: 12px;
+                        font-size: 24px;
+                        text-transform: uppercase;
+                        color: white;
+                        font-weight: 600;
+                        
+                        background-color: $blue-secondary;
+                        height: 15%;
+                        width: calc(100% + 2px);
+                        
+                        position: absolute;
+                        left: -1px;
+                        top: -65px;
+                        
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                     }
                 }
             }

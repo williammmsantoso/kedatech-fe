@@ -44,7 +44,6 @@ export const Pricing = () => {
             ]
         },
     ];
-    const [selected, setSelected] = useState()
 
     return <div className="pricing-container" id="pricing">
         <Title title='Pricing'/>
@@ -53,7 +52,7 @@ export const Pricing = () => {
         <div className="pricing-list flex items-center justify-between">
             {
                 priceList.map((item: any) => {
-                    return <PriceItem {...item} />
+                    return <PriceItem className={item.id === 1 ? 'popular' : ''} {...item} />
                 })
             }
         </div>
