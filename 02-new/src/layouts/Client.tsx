@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Meta } from '../components/Meta';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { PopupLogin } from '../components/PopupLogin';
+import { useAppDispatch, useAppSelector } from '../redux/hook';
+import { selectShowLoginForm, setShowLoginForm } from '../redux/slices/showLoginForm';
 
 interface ClientInterface {
     message?: string;
@@ -12,7 +14,8 @@ interface ClientInterface {
 }
 
 const Client = ({ children, metaTitle, metaDescription} : ClientInterface) => {
-    const [isShow, setIsShow] = useState(false);
+    const isShow = useAppSelector(selectShowLoginForm);
+    const dispatch = useAppDispatch()
 
     return <div>
         <Meta metaTitle={metaTitle} metaDescription={metaDescription} />
@@ -20,7 +23,7 @@ const Client = ({ children, metaTitle, metaDescription} : ClientInterface) => {
         <div className="body">{children}</div>
         <Footer/>
 
-        <PopupLogin isShow={true} onClose={() => setIsShow(!isShow)}/>
+        <PopupLogin isShow={isShow} onClose={() => dispatch(setShowLoginForm(false))}/>
     </div>
 }
 

@@ -1,5 +1,8 @@
 import React from "react";
 import { Button } from "./Button";
+import { useAppDispatch, useAppSelector } from "../redux/hook";
+import { setShowLoginForm } from "../redux/slices/showLoginForm";
+import { selectAuthStatus } from "../redux/slices/auth";
 
 interface PriceItemInterface {
     id: number,
@@ -11,6 +14,9 @@ interface PriceItemInterface {
 }
 
 export const PriceItem = ({ id, name, title, price, features, className } : PriceItemInterface) => {
+    const authStatus = useAppSelector(selectAuthStatus);
+    const dispatch = useAppDispatch();
+
     return <div key={name} className={`price-item ${className}`}>
         <div className="title-wrapper">
             <div className="flex items-end gap-2">
@@ -29,6 +35,8 @@ export const PriceItem = ({ id, name, title, price, features, className } : Pric
             }
         </ol>
 
-        <Button classNameWrapper="grid">Sign In</Button>
+        {
+            !authStatus && <Button classNameWrapper="grid" onClick={() => dispatch(setShowLoginForm(true))}>Sign In</Button>
+        }
     </div>
 }

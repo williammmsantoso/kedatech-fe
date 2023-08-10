@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import { content } from "../constant/content";
+import { useAppDispatch, useAppSelector } from "../redux/hook";
+import { setShowLoginForm } from "../redux/slices/showLoginForm";
+import { selectAuthStatus, setAuthStatus } from "../redux/slices/auth";
 
 export const Header = () => {
+    const authStatus = useAppSelector(selectAuthStatus);
+    const dispatch = useAppDispatch();
+    
     const [isNavExpanded, setIsNavExpanded] = useState(false);
 
     return <nav className="navigation">
@@ -42,7 +48,24 @@ export const Header = () => {
                     })
                 }
                 <li>
-                    <button className="button-login">Login</button>
+                    {
+                        authStatus
+                            ? <button
+                                className="button-login"
+                                onClick={() => {
+                                    dispatch(setShowLoginForm(false))
+                                    dispatch(setAuthStatus(false))
+                                }}
+                            >
+                                Logout
+                            </button>
+                            : <button
+                                className="button-login"
+                                onClick={() => dispatch(setShowLoginForm(true))}
+                            >
+                                Login
+                            </button>
+                    }
                 </li>
             </ul>
         </div>

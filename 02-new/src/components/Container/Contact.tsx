@@ -19,6 +19,6 @@ export const Contact = () => {
                 </div>
             </div>
         </div>
-        <Button classNameWrapper="mt-5" className="text-black bg-white">Contact Us</Button>
+        <Button classNameWrapper="mt-5" className="text-black bg-white" styles={{ color: 'black !important' }} >Contact Us</Button>
     </motion.div>
 }

@@ -4,10 +4,9 @@ import { Contact } from "../components/Container/Contact";
 import { Pricing } from "../components/Container/Pricing";
 import Client from "../layouts/Client";
 
-
 export default function Home() {
   return (
-    <Client metaTitle='Home' metaDescription='Home'>
+    <Client metaTitle='Kedatech' metaDescription='Kedatech'>
       <div className="home-container">
         <Banner />
         <About />

@@ -3,9 +3,14 @@ import { Form, Formik } from "formik";
 import React, { useEffect } from "react";
 import { Button } from "./Button";
 import { loginValidator } from "../helpers/validators";
+import { toast } from "react-toastify";
+import { useAppDispatch } from "../redux/hook";
+import { setAuthStatus } from "../redux/slices/auth";
+import { setShowLoginForm } from "../redux/slices/showLoginForm";
 
 export const PopupLogin = ({ isShow, onClose }) => {
     const initialValues = { email: '', password: '' };
+    const dispatch = useAppDispatch();
 
     useEffect(() => {
       window.addEventListener('keydown', e => {
@@ -15,8 +20,21 @@ export const PopupLogin = ({ isShow, onClose }) => {
       })
     })
 
-    const onHandleSubmit = (values: any) => {
+    const onHandleSubmit = async (values: any) => {
         console.log('values', values);
+
+        if (values.email === 'william@kedatech.com' && values.password === '12345678') {
+            toast.success('Login Succeeded! Welcome back!', {
+                toastId: '15',
+            });
+
+            dispatch(setAuthStatus(true));
+            dispatch(setShowLoginForm(false));
+        } else {
+            toast.error('Email or password is wrong, please try again', {
+                toastId: '14',
+            });
+        }
     }
 
     return <div className={`popup-login-wrapper ${isShow ? 'show' : 'hide'}`}>
@@ -46,28 +64,30 @@ export const PopupLogin = ({ isShow, onClose }) => {
                             <div className="input-wrapper">
                                 <div className="label">Email</div>
                                 <input
-                                    data-testid='email'
                                     id='email'
+                                    className={`${errors && errors.email && 'error-input'}`}
+                                    data-testid='email'
                                     name='email'
                                     placeholder="john.doe@gmail.com"
                                     type="email"
                                     onChange={(e: any) => setFieldValue('email', e.target.value)}
                                 />
                                 {
-                                errors && errors.email && <div className='error-field'>{errors.email}</div>
+                                    errors && errors.email && <div className='error-field'>{errors.email}</div>
                                 }
                             </div>
                             <div className="input-wrapper">
                                 <div className="label">Password</div>
                                 <input
-                                    data-testid='password'
                                     id='password'
+                                    className={`${errors && errors.email && 'error-input'}`}
+                                    data-testid='password'
                                     name='password'
                                     type="password"
                                     onChange={(e: any) => setFieldValue('password', e.target.value)}
                                 />
                                 {
-                                errors && errors.password && <div className='error-field'>{errors.password}</div>
+                                    errors && errors.password && <div className='error-field'>{errors.password}</div>
                                 }
                             </div>
                             <Button
