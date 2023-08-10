@@ -1,0 +1,130 @@
+@media screen and (max-width: 800px) {
+    // global
+    .title {
+        font-size: 24px;
+    }
+    
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .default-container-wrapper {
+        padding: 30px;
+    }
+
+    // component
+    .navigation {
+        padding: 6px;
+
+        .home-name {
+            color: black !important;
+        }
+    }
+
+    .button-wrapper {
+        button {
+            margin-top: 12px;
+            padding: 6px 12px;
+            font-size: 14px;
+        }
+    }
+
+    .footer-container {
+        .sub-url {
+            font-size: 12px !important;
+        }
+        
+        .copyright-wrapper {
+            font-size: 12px;
+        }
+    }
+
+    // pages
+    .banner-home {
+        background: none !important;
+        padding-bottom: 0 !important;
+
+        .text-one {
+            margin: 0 !important;
+        }
+
+        .quotes {
+            text-align: center;
+            margin: 60px auto !important;
+        }
+
+        .img {
+            margin: 0 !important;
+        }
+    }
+
+    .about-container {
+        .flex {
+            flex-direction: column;
+        }
+
+        .img {
+            max-width: unset !important;
+            height: 185px !important;
+        }
+    }
+
+    .pricing-container {
+        .subtitle {
+            margin-bottom: 8px !important;
+        }
+        .pricing-list {
+            margin: 8px 0 !important;
+            overflow-x: auto;
+        }
+
+        .price-item {
+            min-width: 250px;
+            margin-top: 50px;
+
+            &.popular {
+                &::after {
+                    font-size: 16px !important;
+                    height: 10% !important;
+                    top: -45px !important;
+                }
+            }
+
+            .title-wrapper {
+                margin-bottom: 0;
+
+                .price {
+                    font-size: 24px !important;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+
+                .billed-text {
+                    font-size: 16px;
+                }
+            }
+
+            .name {
+                font-size: 14px;
+                padding-top: 16px;
+                margin-bottom: 12px;
+            }
+
+            .feature-list {
+                li {
+                    font-size: 14px !important;
+                }
+            }
+        }
+    }
+
+    .contact-container {
+        margin: 30px !important;
+
+        .title, .subtitle {
+            width: 100% !important;
+        }
+    }
+}

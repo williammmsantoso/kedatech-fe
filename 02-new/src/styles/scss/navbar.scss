@@ -104,20 +104,33 @@
     .navigation {
         .navigation-menu {
             &.expanded ul {
-                display: block;
+                // display: block;
+                opacity: 1;
+                transition: all ease-in-out 0.5s;
+                -webkit-transition: all ease-in-out 0.5s;
+                -moz-transition: all ease-in-out 0.5s;
+                -ms-transition: all ease-in-out 0.5s;
+                -o-transition: all ease-in-out 0.5s;
+                position: absolute;
             }
 
             ul {
-                display: none;
+                // display: none;
+                opacity: 0;
+                transition: all ease-in-out 0.5s;
+                -webkit-transition: all ease-in-out 0.5s;
+                -moz-transition: all ease-in-out 0.5s;
+                -ms-transition: all ease-in-out 0.5s;
+                -o-transition: all ease-in-out 0.5s;
                 // navigation menu is positioned to start 60px from the top of the document (which is directly below the navbar)
-                position: absolute;
+                position: unset;
                 top: 60px;
                 left: 0;
                 // stacks the li tags vertically 
                 flex-direction: column;
                 // makes menu span full height and width
                 width: 100%;
-                height: calc(100vh - 77px);
+                height: 100vh;
                 background-color: white;
                 border-top: 1px solid black;
             }

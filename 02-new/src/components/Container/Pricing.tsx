@@ -46,7 +46,7 @@ export const Pricing = () => {
 
     return <motion.div
         id="pricing"
-        className="pricing-container"
+        className="pricing-container default-container-wrapper"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
     >

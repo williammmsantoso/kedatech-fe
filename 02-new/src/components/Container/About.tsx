@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export const About = () => {
     return <motion.div
         id="about"
-        className="about-container"
+        className="about-container default-container-wrapper"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
     >

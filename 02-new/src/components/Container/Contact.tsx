@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export const Contact = () => {
     return <motion.div
         id="contact"
-        className="contact-container"
+        className="contact-container default-container-wrapper"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
     >
