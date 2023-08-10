@@ -15,6 +15,12 @@
     .home-text-wrapper {
         position: relative;
 
+        .logo {
+            color: white;
+            object-fit: contain;
+            height: 30px;
+        }
+
         .home-name {
             position: relative;
             text-decoration: none;

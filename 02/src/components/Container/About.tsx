@@ -1,8 +1,16 @@
+"use client"
+
 import React from "react";
 import Title from "../Title";
+import { motion } from "framer-motion";
 
 export const About = () => {
-    return <div className="about-container" id="about">
+    return <motion.div
+        id="about"
+        className="about-container"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+    >
         <Title title='About' color='white' />
         <div className="flex items-center justify-between gap-6">
             <img className='img' src="/about.jpeg" alt="about" />
@@ -13,5 +21,5 @@ export const About = () => {
                 </div>
             </div>
         </div>
-    </div>
+    </motion.div>
 }

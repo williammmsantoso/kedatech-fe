@@ -1,9 +1,16 @@
+"use client"
+
 import React from "react";
 import { Button } from "../Button";
-import { BubblePromotion } from "../BubblePromotion";
+import { motion } from "framer-motion";
 
 export const Contact = () => {
-    return <div className="contact-container" id="contact">
+    return <motion.div
+        id="contact"
+        className="contact-container"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+    >
         <div className="flex items-center justify-center">
             <div className="text-center">
                 <div className="title">
@@ -15,5 +22,5 @@ export const Contact = () => {
             </div>
         </div>
         <Button classNameWrapper="mt-5" className="text-black bg-white">Contact Us</Button>
-    </div>
+    </motion.div>
 }

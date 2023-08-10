@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Title from "../Title";
 import { PriceItem } from "../PriceItem";
+import { motion } from "framer-motion";
 
 export const Pricing = () => {
     const priceList = [
@@ -45,7 +46,12 @@ export const Pricing = () => {
         },
     ];
 
-    return <div className="pricing-container" id="pricing">
+    return <motion.div
+        id="pricing"
+        className="pricing-container"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+    >
         <Title title='Pricing'/>
         <h2 className="subtitle">Explore Our Comprehensive ERP Price List</h2>
 
@@ -56,5 +62,5 @@ export const Pricing = () => {
                 })
             }
         </div>
-    </div>
+    </motion.div>
 }

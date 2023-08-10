@@ -10,8 +10,8 @@ export const Header = () => {
         <div className="home-text-wrapper">
             {/* <div className="blue-bg"/>
             <div className="blue-bg second"/> */}
-            <a href="/" className="home-name">
-                Home
+            <a href="/" className="home-name flex items-center justify-between gap-2">
+                <img className="logo" src="/logo.svg" alt="logo" /><span>Home</span>
             </a>
         </div>
         <button
