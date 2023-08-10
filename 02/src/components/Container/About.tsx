@@ -2,7 +2,7 @@ import React from "react";
 import Title from "../Title";
 
 export const About = () => {
-    return <div className="about-home" id="about">
+    return <div className="about-container" id="about">
         <Title title='About' color='white' />
         <div className="flex items-center justify-between gap-6">
             <img className='img' src="/about.jpeg" alt="about" />

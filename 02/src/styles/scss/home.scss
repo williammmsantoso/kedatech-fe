@@ -10,22 +10,24 @@
 
         .text-one {
             margin-bottom: 120px;
+            margin-left: 40%;
+            margin-right: 80px;
         }
 
         .quotes {
-            margin: 60px 0;
+            margin: 60px 80px;
         }
 
         .img {
             object-fit: contain;
             height: 210px;
-            margin-left: 60px;
+            margin-left: 80px;
             margin-bottom: 48px;
         }
 
     }
 
-    .about-home {
+    .about-container {
         background: rgb(82,113,255);
         background: linear-gradient(90deg, rgb(82, 113, 255) 84%, rgb(140, 82, 255) 93%, rgb(179, 107, 224) 100%);
         padding: 80px;
@@ -33,6 +35,57 @@
         .img {
             object-fit: contain;
             height: 500px;
+        }
+    }
+
+    .pricing-container {
+        padding: 80px;
+
+        .subtitle {
+            font-size: 28px;
+        }
+
+        .pricing-list {
+            margin: 48px 0;
+
+            .price-item {
+                border: 1px solid #efefef;
+                padding: 24px;
+                margin-right: 16px;
+                width: 100%;
+                min-height: 500px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: inherit;
+
+                .price {
+                    font-size: 48px;
+                    font-weight: 800;
+                }
+
+                .name {
+                    font-size: 24px;
+                }
+
+                .feature-list {
+                    margin-left: 24px;
+
+                    li {
+                        margin-bottom: 12px;
+                        font-size: 18px;
+
+                        &:before {
+                            content: "\2022";
+                            color: $blue-main;
+                            font-weight: bold;
+                            display: inline-block; 
+                            width: 1em;
+                            margin-left: -1em;
+                        }
+                    }
+                }
+            }
         }
     }
 }
