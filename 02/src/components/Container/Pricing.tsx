@@ -58,7 +58,7 @@ export const Pricing = () => {
         <div className="pricing-list flex items-center justify-between">
             {
                 priceList.map((item: any) => {
-                    return <PriceItem className={item.id === 1 ? 'popular' : ''} {...item} />
+                    return <PriceItem key={item.id} className={item.id === 1 ? 'popular' : ''} {...item} />
                 })
             }
         </div>
