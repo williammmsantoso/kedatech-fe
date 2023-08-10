@@ -7,7 +7,13 @@ export const Footer = () => {
             {
                 content.map((item: any) => {
                     return <h3 className="text-black cursor-pointer" key={item.name}>
-                        <a href={item.url}>{item.name}</a>
+                        <a className="url" href={item.url}>{item.name}</a>
+                        <div className="sub-url">lorem</div>
+                        <div className="sub-url">lorem</div>
+                        <div className="sub-url">lorem</div>
+                        <div className="sub-url">lorem</div>
+                        <div className="sub-url">lorem</div>
+                        <div className="sub-url">lorem</div>
                     </h3>
                 })
             }

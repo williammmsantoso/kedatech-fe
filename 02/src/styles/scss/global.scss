@@ -1,4 +1,12 @@
-// TITLE
+.title {
+    font-size: 48px;
+}
+
+.subtitle {
+    font-size: 28px;
+}
+
+// TITLE COMPONENT
 .title-wrapper {
     margin-bottom: 48px;
 
@@ -22,5 +30,30 @@
             -ms-border-radius: 12px;
             -o-border-radius: 12px;
         }
+    }
+}
+
+// Bubble component
+.bubble-promotion-wrapper {
+    background-color: $yellow-main;
+    color: black;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    padding: 8px 24px;
+    width: 200px;
+    // position: absolute;
+    left: 0;
+    top: 0;
+
+    .bubble-title {
+        font-size: 14px;
+        font-weight: 900;
+    }
+
+    .bubble-subtitle {
+        font-size: 12px;
     }
 }
