@@ -1,6 +1,4 @@
-"use client"
-
-import React, { useState } from "react";
+import React from "react";
 import Title from "../Title";
 import { PriceItem } from "../PriceItem";
 import { motion } from "framer-motion";

@@ -1,9 +1,8 @@
-"use client"
 
-import { loginValidator } from "@/helpers/validators";
 import { Form, Formik } from "formik";
 import React, { useEffect } from "react";
 import { Button } from "./Button";
+import { loginValidator } from "../helpers/validators";
 
 export const PopupLogin = ({ isShow, onClose }) => {
     const initialValues = { email: '', password: '' };

@@ -1,7 +1,5 @@
-'use client';
-
-import { content } from "@/constant/content";
 import React, { useState } from "react";
+import { content } from "../constant/content";
 
 export const Header = () => {
     const [isNavExpanded, setIsNavExpanded] = useState(false);

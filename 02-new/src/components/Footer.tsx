@@ -1,5 +1,5 @@
-import { content } from "@/constant/content";
 import React from "react";
+import { content } from "../constant/content";
 
 export const Footer = () => {
     return <div className="footer-container">
